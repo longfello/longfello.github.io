@@ -4,18 +4,15 @@
 <head>
 	<title>Lyman α</title>
 	<link rel="preconnect" href="https://fonts.gstatic.com">
-	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;700;900&display=swap" rel="stylesheet">
 <style>
+
+body {padding:0;}
 	
 header {
   background: url(/img/nyc.jpg) center no-repeat;
   -webkit-background-size: cover;
           background-size: cover;
-}
-
-.block {
-  position: relative;
-  height:100vh;
 }
 
 header:after {
@@ -29,14 +26,31 @@ header:after {
   z-index: 2;
 }
 
+header .arrow-svg {
+  fill: #fff;
+}
+
+.block {
+  position: relative;
+  height:100vh;
+  text-align: center;
+  #border: 1px solid blue;
+}
+
 .inner {
   position: relative;
   z-index: 3;
-  color: #fff;
-  text-align: center;
   padding: 27vmin 27vmin 0 27vmin;
   #border: 1px solid red;
 }
+
+.raw {
+  position: relative;
+  margin: 0 10vw;
+  padding: 10vh 0;
+}
+
+.white {color: #fff;}
 
 .bottom {
   position: absolute;
@@ -46,24 +60,55 @@ header:after {
   z-index: 3;
   color: #fff;
   text-align: center;
-  #border: 1px solid blue;
   padding-bottom: 7vmin;
+  #border: 1px solid grey;
 }
 
 #logo {
 	width: 25vmax;
 }
 
+h1,h2,h3,p { font-family: 'Roboto', sans-serif; }
+
 h1 {
-		  font-family: 'Roboto', sans-serif;		  
+		  font-weight: 700;
+		  font-size: 4.2vmax;
+		  margin: 0 0 5vw 0;
+}
+
+h2 {
 		  font-weight: 300;
 		  font-size: 3.2vh;
 }
 
+h3 {
+		  font-weight: 700;
+		  font-size: 2.8vh;
+		  margin: 1.0vh 0 0 0;
+}
+
+p { 
+    font-size: 2.0vh; 
+    margin: 1.0vh 0;
+    line-height: 1.3;
+}
+
 .arrow-svg {
-  fill: #fff;
   cursor: pointer;
 }
+
+.icon {width:7vw}
+
+.col-sm-4 {
+  position: relative;
+  display: inline-block;
+  width: 25vmax;
+  padding: 0 1vh 2vh 1vh;
+  #border: 1px solid green;
+  margin: 0 auto; 
+}
+
+
 
 </style>
 </head>
@@ -73,17 +118,40 @@ h1 {
 	<header class="block">
   	<div class="inner">
     	<img id="logo" src="/img/logo.png">
-    	<h1>Electric autopilot aircraft</h1>  	  
+    	<h2 class="white">Electric autopilot aircraft</h2>  	  
   	</div>
-  </header>
-  
-  <div class="block">
-    <h1>The best way to fly close distances</h1>
-  </div>
-
   	<div class="bottom">
   	  <svg class="arrow-svg" x="0px" y="0px" width="38.417px" height="18.592px" viewBox="0 0 38.417 18.592" style="enable-background:new 0 0 38.417 18.592;"><g><path d="M19.208,18.592c-0.241,0-0.483-0.087-0.673-0.261L0.327,1.74c-0.408-0.372-0.438-1.004-0.066-1.413c0.372-0.409,1.004-0.439,1.413-0.066L19.208,16.24L36.743,0.261c0.411-0.372,1.042-0.342,1.413,0.066c0.372,0.408,0.343,1.041-0.065,1.413L19.881,18.332C19.691,18.505,19.449,18.592,19.208,18.592z"></path></g></svg>
   	</div>
+  </header>
+  
+<div class="block">
+
+  <div class="raw">
+    <h1>The best way to fly close distances</h1>
+    <div class="col-sm-4">
+      <img class="icon" src="/img/guarantee.svg">
+      <h3>Reliable</h3>
+      <p>Flying a single route<br>simplifies autopilot programming.<br>The wing gives stability.</p>
+    </div>
+    <div class="col-sm-4">
+      <img class="icon" src="/img/25fn_payment.svg">
+      <h3>Affordable</h3>
+      <p>Due to the low cost of the flight,<br>we can set a price of <b>$30</b><br>per flight per person.</p>
+    </div>
+    <div class="col-sm-4">
+      <img class="icon" src="/img/nosound.svg">
+      <h3>Quiet</h3>
+      <p>The noise level is lower,<br>the flight on the wing<br>does not create noise.</p>
+    </div>
+  </div>
+  
+  <div class="bottom">
+  	  <svg class="arrow-svg" x="0px" y="0px" width="38.417px" height="18.592px" viewBox="0 0 38.417 18.592" style="enable-background:new 0 0 38.417 18.592;"><g><path d="M19.208,18.592c-0.241,0-0.483-0.087-0.673-0.261L0.327,1.74c-0.408-0.372-0.438-1.004-0.066-1.413c0.372-0.409,1.004-0.439,1.413-0.066L19.208,16.24L36.743,0.261c0.411-0.372,1.042-0.342,1.413,0.066c0.372,0.408,0.343,1.041-0.065,1.413L19.881,18.332C19.691,18.505,19.449,18.592,19.208,18.592z"></path></g></svg>
+  </div>
+</div>
+
+
   	
 </body>
 </html>
