@@ -8,11 +8,14 @@
 <style>
 	
 header {
-  position: relative;
-  height:100vh;
   background: url(/img/nyc.jpg) center no-repeat;
   -webkit-background-size: cover;
           background-size: cover;
+}
+
+.block {
+  position: relative;
+  height:100vh;
 }
 
 header:after {
@@ -22,7 +25,7 @@ header:after {
   left: 0;
   right: 0;
   bottom: 0;
-  background: rgba(0,0,0,.6);
+  background: rgba(0,0,0,.65);
   z-index: 2;
 }
 
@@ -31,8 +34,20 @@ header:after {
   z-index: 3;
   color: #fff;
   text-align: center;
-  padding: 25vmin 27vmin 0 27vmin;
+  padding: 27vmin 27vmin 0 27vmin;
   #border: 1px solid red;
+}
+
+.bottom {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 3;
+  color: #fff;
+  text-align: center;
+  #border: 1px solid blue;
+  padding-bottom: 7vmin;
 }
 
 #logo {
@@ -42,7 +57,12 @@ header:after {
 h1 {
 		  font-family: 'Roboto', sans-serif;		  
 		  font-weight: 300;
-		  font-size: 3.6vh;
+		  font-size: 3.2vh;
+}
+
+.arrow-svg {
+  fill: #fff;
+  cursor: pointer;
 }
 
 </style>
@@ -50,12 +70,20 @@ h1 {
 
 <body style="margin:0">
 	
-	<header>
-  		<div class="inner">
-    		<img id="logo" src="/img/logo.png">
-    		<h1>Electric autopilot aircraft</h1>
-  		</div>
-  	</header>
+	<header class="block">
+  	<div class="inner">
+    	<img id="logo" src="/img/logo.png">
+    	<h1>Electric autopilot aircraft</h1>  	  
+  	</div>
+  </header>
+  
+  <div class="block">
+    <h1>The best way to fly close distances</h1>
+  </div>
+
+  	<div class="bottom">
+  	  <svg class="arrow-svg" x="0px" y="0px" width="38.417px" height="18.592px" viewBox="0 0 38.417 18.592" style="enable-background:new 0 0 38.417 18.592;"><g><path d="M19.208,18.592c-0.241,0-0.483-0.087-0.673-0.261L0.327,1.74c-0.408-0.372-0.438-1.004-0.066-1.413c0.372-0.409,1.004-0.439,1.413-0.066L19.208,16.24L36.743,0.261c0.411-0.372,1.042-0.342,1.413,0.066c0.372,0.408,0.343,1.041-0.065,1.413L19.881,18.332C19.691,18.505,19.449,18.592,19.208,18.592z"></path></g></svg>
+  	</div>
   	
 </body>
 </html>
