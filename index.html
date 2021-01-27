@@ -3,14 +3,48 @@
 
 <head>
 	<title>Lyman α</title>
-	<link rel="stylesheet" href="/style.css">
+	<style>
+	
+header {
+  position: relative;
+  height:100vh;
+  background: url(/img/nyc.jpg) center no-repeat;
+  -webkit-background-size: cover;
+          background-size: cover;
+}
+
+header:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0,0,0,.5);
+  z-index: 2;
+}
+
+.inner {
+  position: relative;
+  z-index: 3;
+  color: #fff;
+  text-align: center;
+  padding-top: 30vmin; 
+  border: 1px solid red;
+}
+
+#logo {
+	width: 30vmax;
+}
+
+</style>
 </head>
 
 <body style="margin:0">
 	
 	<header>
   		<div class="inner">
-    		<img src="/img/logo.png">
+    		<img id="logo" src="/img/logo.png">
     		<h1>Electric autopilot aircraft</h1>
   		</div>
   	</header>
