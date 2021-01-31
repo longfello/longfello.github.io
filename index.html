@@ -1,156 +1,105 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>Lyman α - Gray</title>
+        <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico" />
+        <!-- Font Awesome icons (free version)-->
+        <script src="https://use.fontawesome.com/releases/v5.15.1/js/all.js" crossorigin="anonymous"></script>
+        <!-- Google fonts-->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">        
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="css/styles.css?5" rel="stylesheet" />
+    </head>
+    <body id="page-top">
+        <!-- Navigation
+        <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+            <div class="container">
+                <a class="navbar-brand js-scroll-trigger" href="#page-top">Lyman α</a>
+                
+                <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                    Menu
+                    <i class="fas fa-bars"></i>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarResponsive">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#about">About</a></li>
+                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#projects">Projects</a></li>
+                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#signup">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        -->
+        <!-- Masthead-->
+        <header class="masthead" style="min-height:100vh">
+            <div class="container d-flex h-100 w-75 align-items-center">
+                <div class="mx-auto text-center">
+                    <img class="img-fluid" src="assets/img/logo.png" alt="" />
+                    <h2 class="text-white mx-auto mt-2 mb-5" style="font-weight: 300;">Electric autopilot aircraft</h2>
+                </div>
+            </div>
+        </header>
+        
+        <!-- Navigation Arrow-->
+        <div class="bottom-arrow">
+          <a href="#about"><svg style="fill: #fff;" x="0px" y="0px" width="38.417px" height="18.592px" viewBox="0 0 38.417 18.592" style="enable-background:new 0 0 38.417 18.592;"><g><path d="M19.208,18.592c-0.241,0-0.483-0.087-0.673-0.261L0.327,1.74c-0.408-0.372-0.438-1.004-0.066-1.413c0.372-0.409,1.004-0.439,1.413-0.066L19.208,16.24L36.743,0.261c0.411-0.372,1.042-0.342,1.413,0.066c0.372,0.408,0.343,1.041-0.065,1.413L19.881,18.332C19.691,18.505,19.449,18.592,19.208,18.592z"></path></g></svg></a>
+        </div>
+                    
+        <!-- Contact-->
+        <section class="contact-section bg-black" id="about">
+            <div class="container">
+            <h1 class="text-white mb-5">The best way to fly close distances</h1>
 
-<head>
-	<title>Lyman α</title>
-	<link rel="preconnect" href="https://fonts.gstatic.com">
-	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;700;900&display=swap" rel="stylesheet">
-<style>
-
-body {padding:0;}
-	
-header {
-  background: url(/img/nyc.jpg) center no-repeat;
-  -webkit-background-size: cover;
-          background-size: cover;
-}
-
-header:after {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: rgba(0,0,0,.65);
-  z-index: 2;
-}
-
-header .arrow-svg {
-  fill: #fff;
-}
-
-.block {
-  position: relative;
-  height:100vh;
-  text-align: center;
-  #border: 1px solid blue;
-}
-
-.inner {
-  position: relative;
-  z-index: 3;
-  padding: 27vmin 27vmin 0 27vmin;
-  #border: 1px solid red;
-}
-
-.raw {
-  position: relative;
-  margin: 0 10vw;
-  padding: 10vh 0;
-}
-
-.white {color: #fff;}
-
-.bottom {
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  z-index: 3;
-  color: #fff;
-  text-align: center;
-  padding-bottom: 7vmin;
-  #border: 1px solid grey;
-}
-
-#logo {
-	width: 25vmax;
-}
-
-h1,h2,h3,p { font-family: 'Roboto', sans-serif; }
-
-h1 {
-		  font-weight: 700;
-		  font-size: 4.2vmax;
-		  margin: 0 0 5vw 0;
-}
-
-h2 {
-		  font-weight: 300;
-		  font-size: 3.2vh;
-}
-
-h3 {
-		  font-weight: 700;
-		  font-size: 2.8vh;
-		  margin: 1.0vh 0 0 0;
-}
-
-p { 
-    font-size: 2.0vh; 
-    margin: 1.0vh 0;
-    line-height: 1.3;
-}
-
-.arrow-svg {
-  cursor: pointer;
-}
-
-.icon {width:7vw}
-
-.col-sm-4 {
-  position: relative;
-  display: inline-block;
-  width: 25vmax;
-  padding: 0 1vh 2vh 1vh;
-  #border: 1px solid green;
-  margin: 0 auto; 
-}
-
-
-
-</style>
-</head>
-
-<body style="margin:0">
-	
-	<header class="block">
-  	<div class="inner">
-    	<img id="logo" src="/img/logo.png">
-    	<h2 class="white">Electric autopilot aircraft</h2>  	  
-  	</div>
-  	<div class="bottom">
-  	  <a href="#Description"><svg class="arrow-svg" x="0px" y="0px" width="38.417px" height="18.592px" viewBox="0 0 38.417 18.592" style="enable-background:new 0 0 38.417 18.592;"><g><path d="M19.208,18.592c-0.241,0-0.483-0.087-0.673-0.261L0.327,1.74c-0.408-0.372-0.438-1.004-0.066-1.413c0.372-0.409,1.004-0.439,1.413-0.066L19.208,16.24L36.743,0.261c0.411-0.372,1.042-0.342,1.413,0.066c0.372,0.408,0.343,1.041-0.065,1.413L19.881,18.332C19.691,18.505,19.449,18.592,19.208,18.592z"></path></g></svg></a>
-  	</div>
-  </header>
-  
-<div class="block">
-	<a name="Description" />
-  <div class="raw">
-    <h1>The best way to fly close distances</h1>
-    <div class="col-sm-4">
-      <img class="icon" src="/img/guarantee.svg">
-      <h3>Reliable</h3>
-      <p>Flying a single route<br>simplifies autopilot programming.<br>The wing gives stability.</p>
-    </div>
-    <div class="col-sm-4">
-      <img class="icon" src="/img/25fn_payment.svg">
-      <h3>Affordable</h3>
-      <p>Due to the low cost of the flight,<br>we can set a price of <b>$30</b><br>per flight per person.</p>
-    </div>
-    <div class="col-sm-4">
-      <img class="icon" src="/img/nosound.svg">
-      <h3>Quiet</h3>
-      <p>The noise level is lower,<br>the flight on the wing<br>does not create noise.</p>
-    </div>
- </div>
-  <div class="bottom">
-  	  <svg class="arrow-svg" x="0px" y="0px" width="38.417px" height="18.592px" viewBox="0 0 38.417 18.592" style="enable-background:new 0 0 38.417 18.592;"><g><path d="M19.208,18.592c-0.241,0-0.483-0.087-0.673-0.261L0.327,1.74c-0.408-0.372-0.438-1.004-0.066-1.413c0.372-0.409,1.004-0.439,1.413-0.066L19.208,16.24L36.743,0.261c0.411-0.372,1.042-0.342,1.413,0.066c0.372,0.408,0.343,1.041-0.065,1.413L19.881,18.332C19.691,18.505,19.449,18.592,19.208,18.592z"></path></g></svg>
-  </div>
-</div>
-
-
-  	
-</body>
+                <div class="row">
+                                                
+                    <div class="col-md-4 mb-3 mb-md-0">
+                        <div class="card py-4 h-100">
+                            <div class="card-body text-center">
+                                <i class="bi bi-patch-check text-primary display-4"></i>
+                                <h2 class="mt-3">Reliable</h2>
+                                <p>Flying a single route<br> simplifies autopilot programming.<br> The wing gives stability.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-3 mb-md-0">
+                        <div class="card py-4 h-100">
+                            <div class="card-body text-center">
+                                <i class="bi bi-credit-card text-primary display-4"></i>
+                                <h2 class="mt-3">Affordable</h2>
+                                <p>Due to the low cost of the flight,<br> we can set a price of $30<br> per flight per person.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-3 mb-md-0">
+                        <div class="card py-4 h-100">
+                            <div class="card-body text-center">
+                                <i class="bi bi-volume-mute text-primary display-4"></i>
+                                <h2 class="mt-3">Quiet</h2>
+                                <p>The noise level is lower,<br> the flight on the wing<br> does not create noise.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="social d-flex justify-content-center">
+                    <a class="mx-2" href="#!"><i class="fab fa-twitter"></i></a>
+                    <a class="mx-2" href="#!"><i class="fab fa-facebook-f"></i></a>
+                    <a class="mx-2" href="#!"><i class="fab fa-github"></i></a>
+                </div>
+            </div>
+        </section>
+        <!-- Footer-->
+        <footer class="footer bg-black small text-center text-white-50"><div class="container">Copyright © Your Website 2020</div></footer>
+        <!-- Bootstrap core JS-->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Third party plugin JS-->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+        <!-- Core theme JS-->
+        <script src="js/scripts.js"></script>
+    </body>
 </html>
