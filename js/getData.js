@@ -1,5 +1,5 @@
 // Номер записи, которую нужно показать (0 — первая, 1 — вторая и т.д.)
-const recordIndex = 1;
+const recordIndex = 0;
 
 (async () => {
   const status = document.getElementById('status');
