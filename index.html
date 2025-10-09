@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Вторая запись из notes</title>
+  <title>Просмотр записи из notes</title>
   <style>
     body { font-family: system-ui, -apple-system, Segoe UI, Roboto, sans-serif; max-width: 720px; margin: 40px auto; line-height: 1.5; }
     .card { border: 1px solid #ddd; border-radius: 12px; padding: 16px; }
@@ -12,7 +12,7 @@
   </style>
 </head>
 <body>
-  <h1>Вторая запись из таблицы <code>notes</code></h1>
+  <h1>Запись из таблицы <code>notes</code></h1>
 
   <div id="status" class="muted">Загружаю…</div>
   <div id="note" class="card" hidden>
@@ -21,39 +21,6 @@
     <pre id="content"></pre>
   </div>
 
-  <script>
-    (async () => {
-      const status = document.getElementById('status');
-      try {
-        // 1) Получаем все заметки. API обрабатывает это на стороне Cloudflare Worker.
-        const res = await fetch('/api/notes', { credentials: 'include' });
-        if (!res.ok) throw new Error('HTTP ' + res.status);
-        const data = await res.json();
-
-        // 2) Берём вторую запись (индекс 1). Проверяем, что она существует.
-        const second = Array.isArray(data) ? data[1] : null;
-        if (!second) {
-          status.textContent = 'В таблице нет второй записи.';
-          return;
-        }
-
-        // 3) Рендерим.
-        document.getElementById('id').textContent = second.id ?? '—';
-        document.getElementById('notebook').textContent = second.notebook ?? '—';
-        document.getElementById('title').textContent = second.title ?? '(без названия)';
-        document.getElementById('content').textContent = second.note ?? '';
-
-        document.getElementById('note').hidden = false;
-        status.remove();
-      } catch (err) {
-        status.textContent = 'Не удалось загрузить данные: ' + (err?.message || err);
-      }
-    })();
-  </script>
-
-  <!-- Если у тебя реализован эндпоинт вида /api/notes/:id,
-       можно вместо выборки по индексу сразу запросить id=2:
-       fetch('/api/notes/2').then(r => r.json()).then(note => { ... })
-  -->
+  <script src="script.js"></script>
 </body>
 </html>
