@@ -3,25 +3,23 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Просмотр записи из notes</title>
+  <title>Запись из notes</title>
   <style>
+    /* скрываем всё до готовности */
+    html.loading body { visibility: hidden; }
     body { font-family: system-ui, -apple-system, Segoe UI, Roboto, sans-serif; max-width: 720px; margin: 40px auto; line-height: 1.5; }
     .card { border: 1px solid #ddd; border-radius: 12px; padding: 16px; }
     .muted { color: #666; font-size: 0.9em; }
     pre { white-space: pre-wrap; }
   </style>
+  <script>
+    // помечаем HTML как "loading" до завершения отрисовки
+    document.documentElement.classList.add('loading');
+  </script>
 </head>
 <body>
-  <h1>Запись из таблицы <code>notes</code></h1>
+  <main id="app"></main>
 
-  <div id="status" class="muted">Загружаю…</div>
-  <div id="note" class="card" hidden>
-    <h2 id="title"></h2>
-    <div class="muted">id: <span id="id"></span> · notebook: <span id="notebook"></span></div>
-    <pre id="content"></pre>
-  </div>
-
-  <!-- Подключаем внешний JavaScript -->
-  <script src="/js/getData.js?1"></script>
+  <script src="/js/getData.js?1" defer></script>
 </body>
 </html>
