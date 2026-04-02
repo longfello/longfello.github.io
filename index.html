@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Premium Moringa Leaf Powder - Quality Comparison</title>
+    <title>Premium Moringa from Paraguay | Wholesale Supply to US</title>
     <style>
         :root {
             --bg-color: #f9f9f7;
@@ -16,6 +16,7 @@
             --icon-gray: #d1d1d1;
         }
 
+
         body {
             font-family: 'Segoe UI', Roboto, Arial, sans-serif;
             background-color: var(--bg-color);
@@ -26,14 +27,77 @@
             justify-content: center;
         }
 
+
         .container { width: 800px; }
+
 
         .header { text-align: center; margin-bottom: 30px; }
         .header h3 { text-transform: uppercase; font-size: 12px; letter-spacing: 1.5px; color: #777; margin-bottom: 10px; }
-        .header h1 { font-size: 28px; margin: 0; color: #1a1a1a; }
+        .header h1 { font-size: 32px; margin: 0; color: #1a1a1a; }
         .header p { color: #666; font-size: 14px; }
 
-        /* Секция с листьями (Доказательство) */
+
+        /* INTRO SECTION */
+        .intro-section {
+            background: #fff;
+            border-left: 4px solid var(--brand-green);
+            padding: 25px;
+            margin-bottom: 30px;
+            border-radius: 0 8px 8px 0;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.03);
+        }
+        .intro-section p { 
+            margin: 0 0 15px 0; 
+            line-height: 1.6; 
+            font-size: 16px; 
+            color: #444; 
+        }
+        .intro-section p:last-child { margin-bottom: 0; }
+
+
+        /* WHOLESALE HERO BLOCK */
+        .wholesale-hero {
+            background: #fff;
+            border: 2px solid var(--brand-green);
+            border-radius: 8px;
+            padding: 30px;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .price-tag { font-size: 42px; font-weight: bold; color: var(--brand-green); margin-bottom: 5px; }
+        .price-tag small { font-size: 18px; color: #666; font-weight: normal; }
+        .moq-info { font-size: 16px; font-weight: bold; color: #333; margin-bottom: 15px; }
+        
+        .usa-stock-badge {
+            background: var(--light-green-bg);
+            border: 1px solid var(--brand-green);
+            padding: 25px 15px;
+            border-radius: 6px;
+            margin: 20px 0;
+            display: inline-block;
+            width: 90%;
+        }
+        .usa-stock-badge strong.logistic-title { color: var(--brand-green); text-transform: uppercase; font-size: 13px; display: block; margin-bottom: 5px; }
+        .usa-stock-badge p { margin: 0; font-size: 14px; color: #444; line-height: 1.4; }
+        
+        /* Added 'air' for the specific sub-header */
+        .usa-stock-badge strong.location-tag { 
+            color: var(--brand-green); 
+            text-transform: uppercase; 
+            font-size: 14px; 
+            display: block; 
+            margin-top: 25px; 
+            margin-bottom: 10px; 
+        }
+
+
+        .cta-group { display: flex; justify-content: center; gap: 15px; margin-top: 20px; }
+        .btn { padding: 14px 28px; border-radius: 4px; font-weight: bold; text-decoration: none; font-size: 14px; transition: 0.3s; cursor: pointer; border: none; }
+        .btn-primary { background: var(--brand-green); color: white; }
+        .btn-secondary { border: 1px solid var(--brand-green); color: var(--brand-green); background: transparent; }
+
+
+        /* PROOF SECTION */
         .proof-section {
             text-align: center;
             margin-bottom: 20px;
@@ -42,12 +106,14 @@
             font-weight: bold;
         }
 
+
         .comparison-cards {
             display: grid;
             grid-template-columns: 1fr 1fr;
             gap: 20px;
             margin-bottom: 30px;
         }
+
 
         .card {
             background: #fff;
@@ -57,6 +123,7 @@
             position: relative;
         }
         .card.premium { border: 2px solid var(--brand-green); }
+
 
         .img-container {
             width: 100%;
@@ -71,6 +138,7 @@
             position: relative;
         }
 
+
         .img-container img {
             max-width: 100%;
             max-height: 100%;
@@ -78,6 +146,7 @@
             transition: transform 0.4s ease; 
             cursor: zoom-in;
         }
+
 
         .zoom-hint {
             position: absolute;
@@ -94,8 +163,10 @@
             transition: 0.3s;
         }
 
+
         .img-container:hover .zoom-hint { opacity: 1; background: var(--brand-green); }
         .img-container:hover img { transform: scale(2); }
+
 
         .badge {
             display: inline-block;
@@ -108,10 +179,12 @@
         .badge-our { background: var(--light-green-bg); color: var(--brand-green); }
         .badge-market { background: #eee; color: #666; }
 
+
         .card-info strong { display: block; font-size: 16px; color: #1a1a1a; }
         .card-info small { color: #666; font-size: 13px; }
 
-        /* Блок с порошком */
+
+        /* POWDER SHOWCASE */
         .powder-showcase {
             display: grid;
             grid-template-columns: 1fr 1fr;
@@ -123,12 +196,14 @@
             border: 1px dashed var(--brand-green);
         }
 
+
         .powder-item { display: flex; align-items: center; gap: 15px; }
         .powder-item img { width: 70px; height: 70px; border-radius: 50%; object-fit: cover; border: 2px solid var(--bg-color); }
         .powder-text h4 { margin: 0; font-size: 14px; color: var(--brand-green); }
         .powder-text p { margin: 0; font-size: 12px; color: #666; }
 
-        /* Таблица */
+
+        /* TABLE SECTION */
         .table-section {
             width: 100%;
             border-collapse: separate; 
@@ -140,6 +215,7 @@
             border: 1px solid var(--border-table);
         }
 
+
         .table-section th, .table-section td {
             padding: 14px 15px;
             text-align: left;
@@ -148,6 +224,7 @@
         }
         .table-section tr:last-child td { border-bottom: none; }
         .table-section th { background: #f2f2ed; color: #444; font-weight: bold; text-transform: uppercase; font-size: 11px; }
+
 
         .status-icon {
             display: inline-flex;
@@ -164,6 +241,7 @@
         .status-cross { background-color: var(--icon-gray); color: white; font-size: 10px; }
         .status-cross::before { content: "✕"; }
 
+
         .result-bar {
             background-color: var(--light-green-bg);
             border-radius: 8px;
@@ -172,6 +250,7 @@
             align-items: center;
             font-size: 15px;
             border: 1px solid var(--icon-green);
+            margin-bottom: 20px;
         }
         .result-icon {
             background: var(--brand-green);
@@ -186,27 +265,57 @@
             flex-shrink: 0;
         }
 
-        .footer { text-align: center; font-size: 11px; color: #999; margin-top: 20px; }
+
+        .footer { text-align: center; font-size: 11px; color: #999; margin-top: 20px; padding-bottom: 40px; }
     </style>
 </head>
 <body>
 
+
 <div class="container">
     <div class="header">
-        <h3>Moringa Leaf Powder · Quality Standards</h3>
-        <h1>The Leaf defines the Powder</h1>
-        <p>Hohenau, Itapúa, Paraguay · Estate Grown · Raw & Unrefined</p>
+        <h3>Direct Producer Offer</h3>
+        <h1>Premium Moringa from Paraguay</h1>
+        <p>Hohenau, Itapúa Department · Estate Grown · Raw & Cold-Milled</p>
     </div>
+
+
+    <div class="intro-section">
+        <p>
+            As a direct producer based in Hohenau, Paraguay, we offer premium Moringa cultivated exclusively with sun, fresh air, and pure water, free from all chemical fertilizers and pesticides. We are seeking wholesale partners in the USA who value uncompromising botanical quality and complete supply chain transparency. By controlling everything from estate cultivation to final cold-milling, we deliver a product that is cleaner and more nutrient-dense than industrial market standards.
+        </p>
+    </div>
+
+
+    <div class="wholesale-hero">
+        <div class="price-tag">$25.00 <small>/ kg ($11.34 / lb)</small></div>
+        <div class="moq-info">Wholesale MOQ: 100 kg</div>
+        
+        <div class="usa-stock-badge">
+            <strong class="logistic-title">🚀 Domestic US Logistics</strong>
+            <p>To support our US partners, 250g professional samples are</p>
+            <strong class="location-tag">STOCKED IN CALIFORNIA</strong>
+            <p>for immediate domestic shipping (2-4 days). Verify our quality before committing to a bulk order.</p>
+        </div>
+
+
+        <div class="cta-group">
+            <a href="mailto:contact@longfello.com" class="btn btn-primary">Start Order Discussion</a>
+            <a href="mailto:contact@longfello.com?subject=Sample Request" class="btn btn-secondary">Request Sample from US Stock</a>
+        </div>
+    </div>
+
 
     <div class="proof-section">
         "We show you the leaf so you know the powder is pure."
     </div>
 
+
     <div class="comparison-cards">
         <div class="card premium">
             <div class="img-container">
                 <img src="img/our_leaf.webp" alt="Our Leaves">
-                <div class="zoom-hint">🔍 Source Leaf</div>
+                <div class="zoom-hint">🔍 Our Leaf</div>
             </div>
             <span class="badge badge-our">★ OUR SOURCE</span>
             <div class="card-info">
@@ -214,6 +323,7 @@
                 <small>Air-dried at room temp to lock in nutrients.</small>
             </div>
         </div>
+
 
         <div class="card">
             <div class="img-container">
@@ -227,6 +337,7 @@
             </div>
         </div>
     </div>
+
 
     <div class="powder-showcase">
         <div class="powder-item">
@@ -245,6 +356,7 @@
         </div>
     </div>
 
+
     <table class="table-section">
         <thead>
             <tr>
@@ -258,6 +370,11 @@
                 <td>Color Appearance</td>
                 <td><span class="status-icon" style="background-color: var(--brand-green);"></span> Rich botanical green</td>
                 <td><span class="status-icon" style="background-color: var(--market-olive);"></span> Dull brownish-yellow</td>
+            </tr>
+            <tr>
+                <td>Chemicals / Pesticides</td>
+                <td><span class="status-icon status-check"></span> 0% (Pure Sun & Water)</td>
+                <td><span class="status-icon status-cross"></span> Varies by source</td>
             </tr>
             <tr>
                 <td>Raw Material</td>
@@ -275,11 +392,6 @@
                 <td><span class="status-icon status-cross"></span> Gritty / Coarse</td>
             </tr>
             <tr>
-                <td>Nutrient Retention</td>
-                <td><span class="status-icon status-check"></span> Maximum Bioavailability</td>
-                <td><span class="status-icon status-cross"></span> Thermally degraded</td>
-            </tr>
-            <tr>
                 <td>Flavor Profile</td>
                 <td><span class="status-icon status-check"></span> Mild, fresh, green tea-like</td>
                 <td><span class="status-icon status-cross"></span> Bitter, burnt, or fusty</td>
@@ -287,15 +399,18 @@
         </tbody>
     </table>
 
+
     <div class="result-bar">
         <span class="result-icon">★</span>
         <strong>Verdict: Our product outperforms the market standard in color, purity, and nutrient density—verified by direct sample comparison.</strong>
     </div>
 
+
     <div class="footer">
-        Hohenau, Itapúa, Paraguay · Estate Grown · Small Batch Production
+        Hohenau, Itapúa, Paraguay · Estate Grown · FOB Asunción / CIF US Ports available
     </div>
 </div>
+
 
 </body>
 </html>
