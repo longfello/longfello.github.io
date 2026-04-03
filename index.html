@@ -88,19 +88,20 @@
         .btn-secondary { border: 1px solid var(--brand-green); color: var(--brand-green); background: transparent; }
 
         .whatsapp-icon {
-            display: flex;
-            width: 44px;
-            height: 44px;
-            background-color: #25D366;
-            border-radius: 50%;
-            align-items: center;
-            justify-content: center;
-            text-decoration: none;
-            transition: 0.3s;
-            margin-left: 15px;
-        }
-        .whatsapp-icon:hover { transform: scale(1.1); box-shadow: 0 2px 5px rgba(0,0,0,0.2); }
-        .whatsapp-icon svg { width: 24px; height: 24px; fill: white; }
+    display: flex;
+    width: 44px;
+    height: 44px;
+    background-color: #25D366;
+    border-radius: 50%;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    transition: 0.3s;
+    margin-left: 20px; /* Увеличил отступ для разделения функций */
+    flex-shrink: 0;
+}
+.whatsapp-icon:hover { transform: scale(1.1); background-color: #128C7E; }
+.whatsapp-icon svg { width: 25px; height: 25px; fill: white; }
 
         .proof-section {
             text-align: center;
@@ -283,15 +284,15 @@
         </div>
 
         <div class="cta-group">
-            <a href="mailto:contact@longfello.com" class="btn btn-primary">Start Order Discussion</a>
-            <a href="mailto:contact@longfello.com?subject=Sample Request" class="btn btn-secondary">Request Sample from US Stock</a>
-            
-            <a href="https://wa.me/13479304623" class="whatsapp-icon" title="Chat on WhatsApp" target="_blank">
-                <svg viewBox="0 0 24 24">
-                    <path d="M12.004 2c-5.525 0-10 4.478-10 10 0 1.769.463 3.428 1.269 4.869l-1.269 4.872 5-1.313c1.428.831 3.088 1.312 4.997 1.312 5.525 0 10.003-4.478 10.003-10s-4.478-10-10.003-10zm0 18.063c-1.653 0-3.191-.431-4.522-1.181l-.325-.184-2.969.778.791-2.903-.203-.322c-.816-1.294-1.266-2.8-1.266-4.381 0-4.388 3.569-7.96 7.966-7.96s7.963 3.572 7.963 7.96-3.569 7.963-7.966 7.963zm4.747-6.222c-.26-.131-1.538-.759-1.775-.847-.238-.088-.41-.131-.581.131-.172.262-.666.847-.816 1.016-.15.169-.3.191-.56.062-.26-.131-1.097-.403-2.091-1.288-.772-.688-1.294-1.538-1.444-1.797-.15-.26-.016-.4-.147-.531-.119-.119-.26-.306-.391-.459-.131-.153-.175-.262-.26-.438-.088-.175-.044-.328.022-.459.066-.131.581-.759.816-1.016.238-.26.316-.438.472-.731.156-.294.078-.547-.038-.678-.116-.131-.581-.759-.816-1.016-.238-.26-.41-.131-.581-.131-.172 0-.363-.044-.56-.044-.197 0-.522.072-.797.35-.275.278-.1.884-.1 1.944 0 1.06.775 2.081.881 2.222.106.141 1.531 2.338 3.712 3.281.519.225.922.359 1.238.459.522.166 1.003.141 1.381.084.422-.062 1.3-.531 1.484-1.047.188-.519.188-.966.131-1.016-.056-.05-.219-.119-.478-.25zm1.184 1.184z"></path>
-                </svg>
-            </a>
-        </div>
+    <a href="mailto:contact@longfello.com" class="btn btn-primary">Start Order Discussion</a>
+    <a href="mailto:contact@longfello.com?subject=Sample Request" class="btn btn-secondary">Request Sample from US Stock</a>
+    
+    <a href="https://wa.me/13479304623" class="whatsapp-icon" title="Chat on WhatsApp" target="_blank">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+            <path d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.1 0-65.6-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-5.5-2.8-23.2-8.5-44.2-27.1-16.4-14.6-27.4-32.7-30.6-38.2-3.2-5.6-.3-8.6 2.4-11.3 2.5-2.4 5.5-6.5 8.3-9.7 2.8-3.3 3.7-5.6 5.5-9.3 1.8-3.7.9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 13.2 5.7 23.5 9.2 31.6 11.8 13.3 4.2 25.4 3.6 35 2.2 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z"/>
+        </svg>
+    </a>
+</div>
     </div>
 
     <div class="proof-section">
