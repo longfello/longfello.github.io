@@ -1,0 +1,569 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Инвестиционное предложение | Moringa Paraguay</title>
+    <style>
+        :root {
+            --bg-color: #f9f9f7;
+            --brand-green: #76976c;
+            --market-olive: #8b8e40;
+            --border-color: #e0e0d8;
+            --border-table: #d1d1ca;
+            --light-green-bg: #e9f2e6;
+            --icon-green: #7eb67d;
+            --icon-gray: #d1d1d1;
+        }
+
+        * { box-sizing: border-box; }
+
+        body {
+            font-family: 'Segoe UI', Roboto, Arial, sans-serif;
+            background-color: var(--bg-color);
+            color: #333;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .container { width: 800px; }
+
+        .header { text-align: center; margin-bottom: 30px; }
+        .header h3 { text-transform: uppercase; font-size: 12px; letter-spacing: 1.5px; color: #777; margin-bottom: 10px; }
+        .header h1 { font-size: 32px; margin: 0; color: #1a1a1a; }
+        .header p { color: #666; font-size: 14px; }
+
+        .intro-section {
+            background: #fff;
+            border-left: 4px solid var(--brand-green);
+            padding: 25px;
+            margin-bottom: 30px;
+            border-radius: 0 8px 8px 0;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.03);
+        }
+        .intro-section p {
+            margin: 0 0 15px 0;
+            line-height: 1.6;
+            font-size: 16px;
+            color: #444;
+        }
+        .intro-section p:last-child { margin-bottom: 0; }
+
+        .wholesale-hero {
+            background: #fff;
+            border-radius: 8px;
+            padding: 30px;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .metrics-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 15px;
+            margin-bottom: 25px;
+        }
+
+        .metric-box {
+            background: var(--light-green-bg);
+            border: 1px solid var(--icon-green);
+            border-radius: 6px;
+            padding: 18px 10px;
+        }
+        .metric-box .metric-val {
+            font-size: 32px;
+            font-weight: bold;
+            color: var(--brand-green);
+            line-height: 1.1;
+            margin-bottom: 4px;
+        }
+        .metric-box .metric-label {
+            font-size: 12px;
+            color: #666;
+            text-transform: uppercase;
+            letter-spacing: 0.8px;
+        }
+
+        .conversion-badge {
+            background: var(--light-green-bg);
+            border: 1px solid var(--brand-green);
+            padding: 22px 20px;
+            border-radius: 6px;
+            margin: 0 0 20px 0;
+            text-align: left;
+        }
+        .conversion-badge strong.badge-title {
+            color: var(--brand-green);
+            text-transform: uppercase;
+            font-size: 13px;
+            display: block;
+            margin-bottom: 14px;
+            letter-spacing: 0.8px;
+        }
+
+        .trigger-row {
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            margin-bottom: 12px;
+        }
+        .trigger-row:last-child { margin-bottom: 0; }
+        .trigger-num {
+            background: var(--brand-green);
+            color: white;
+            border-radius: 50%;
+            width: 22px;
+            height: 22px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 11px;
+            font-weight: bold;
+            flex-shrink: 0;
+            margin-top: 2px;
+        }
+        .trigger-text { font-size: 14px; color: #333; line-height: 1.5; }
+        .trigger-text span { color: #666; font-size: 13px; display: block; margin-top: 2px; }
+
+        .cta-group {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 15px;
+            margin-top: 20px;
+        }
+        .btn {
+            padding: 14px 28px;
+            border-radius: 4px;
+            font-weight: bold;
+            text-decoration: none;
+            font-size: 14px;
+            transition: 0.3s;
+            cursor: pointer;
+            border: none;
+        }
+        .btn-primary { background: var(--brand-green); color: white; }
+        .btn-primary:hover { background: #5d7a54; }
+        .btn-wa { display: inline-flex; align-items: center; }
+        .btn-secondary {
+            border: 1px solid var(--brand-green);
+            color: var(--brand-green);
+            background: transparent;
+        }
+        .btn-secondary:hover { background: var(--light-green-bg); }
+
+        .whatsapp-icon {
+            display: flex;
+            width: 44px;
+            height: 44px;
+            background-color: #25D366;
+            border-radius: 50%;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            transition: 0.3s;
+            margin-left: 20px;
+            flex-shrink: 0;
+        }
+        .whatsapp-icon:hover { transform: scale(1.1); background-color: #128C7E; }
+        .whatsapp-icon svg { width: 25px; height: 25px; fill: white; }
+
+        .proof-section {
+            text-align: center;
+            margin-bottom: 20px;
+            font-style: italic;
+            color: var(--brand-green);
+            font-weight: bold;
+        }
+
+        .comparison-cards {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+
+        .card {
+            background: #fff;
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 20px;
+        }
+        .card.premium { border: 2px solid var(--brand-green); }
+
+        .card-icon-block {
+            width: 100%;
+            height: 100px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 15px;
+            font-size: 50px;
+        }
+
+        .badge {
+            display: inline-block;
+            padding: 4px 10px;
+            border-radius: 12px;
+            font-size: 11px;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+        .badge-our { background: var(--light-green-bg); color: var(--brand-green); }
+        .badge-market { background: #eee; color: #666; }
+
+        .card-info strong { display: block; font-size: 15px; color: #1a1a1a; margin-bottom: 6px; }
+        .card-info small { color: #666; font-size: 13px; line-height: 1.6; display: block; }
+
+        .priority-section {
+            background: #fff;
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 25px;
+            margin-bottom: 30px;
+        }
+        .priority-section h3 {
+            text-transform: uppercase;
+            font-size: 11px;
+            letter-spacing: 1px;
+            color: #777;
+            margin: 0 0 15px;
+        }
+        .priority-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 0;
+            border-bottom: 1px solid var(--border-table);
+            font-size: 14px;
+            gap: 20px;
+        }
+        .priority-row:last-child { border-bottom: none; padding-bottom: 0; }
+        .priority-label { color: #444; }
+        .priority-note { color: #666; font-size: 13px; }
+        .priority-val {
+            font-weight: bold;
+            font-size: 15px;
+            color: var(--brand-green);
+            background: var(--light-green-bg);
+            padding: 4px 14px;
+            border-radius: 12px;
+            border: 1px solid var(--icon-green);
+            white-space: nowrap;
+        }
+        .priority-val.cap {
+            color: #7a6030;
+            background: #fdf3e0;
+            border-color: #e0c070;
+        }
+
+        .table-section {
+            width: 100%;
+            border-collapse: collapse;
+            border-spacing: 0;
+            margin-bottom: 30px;
+            background: #fff;
+            border-radius: 8px;
+            overflow: hidden;
+            border: 1px solid var(--border-table);
+        }
+
+        .table-section th, .table-section td {
+            padding: 14px 15px;
+            text-align: left;
+            border-bottom: 1px solid var(--border-table);
+            font-size: 13px;
+        }
+        .table-section th {
+            background: #f2f2ed;
+            color: #444;
+            font-weight: bold;
+            text-transform: uppercase;
+            font-size: 11px;
+        }
+        .table-section tr:last-child td { border-bottom: none; }
+
+        .status-icon {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 18px;
+            height: 18px;
+            border-radius: 50%;
+            margin-right: 10px;
+            vertical-align: middle;
+        }
+        .status-check { background-color: var(--icon-green); color: white; font-size: 10px; }
+        .status-check::before { content: "✓"; }
+        .status-cross { background-color: var(--icon-gray); color: white; font-size: 10px; }
+        .status-cross::before { content: "✕"; }
+        .status-warn { background-color: #e0a84e; color: white; font-size: 10px; }
+        .status-warn::before { content: "!"; }
+
+        .result-bar {
+            background-color: var(--light-green-bg);
+            border-radius: 8px;
+            padding: 18px;
+            display: flex;
+            align-items: center;
+            font-size: 15px;
+            border: 1px solid var(--icon-green);
+            margin-bottom: 20px;
+        }
+        .result-icon {
+            background: var(--brand-green);
+            color: white;
+            border-radius: 50%;
+            width: 24px;
+            height: 24px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 15px;
+            flex-shrink: 0;
+        }
+
+        .footer {
+            text-align: center;
+            font-size: 11px;
+            color: #999;
+            margin-top: 20px;
+            padding-bottom: 40px;
+        }
+        .scenarios-section {
+            margin-bottom: 30px;
+        }
+        .scenarios-title {
+            text-transform: uppercase;
+            font-size: 11px;
+            letter-spacing: 1px;
+            color: #777;
+            margin: 0 0 15px;
+        }
+        .scenarios-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 15px;
+            margin-bottom: 12px;
+            align-items: start;
+        }
+        .scenario {
+            background: #fff;
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 18px;
+            display: flex;
+            flex-direction: column;
+        }
+        .scenario-bad { border-top: 3px solid #c0b090; }
+        .scenario-mid { border-top: 3px solid var(--icon-green); }
+        .scenario-good { border-top: 3px solid var(--brand-green); }
+        .scenario-label {
+            font-size: 12px;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 0.7px;
+            color: #888;
+            margin-bottom: 3px;
+        }
+        .scenario-bad .scenario-label { color: #9a8060; }
+        .scenario-mid .scenario-label { color: var(--icon-green); }
+        .scenario-good .scenario-label { color: var(--brand-green); }
+        .scenario-desc {
+            font-size: 13px;
+            color: #555;
+            margin-bottom: 14px;
+            padding-bottom: 12px;
+            border-bottom: 1px solid var(--border-table);
+            min-height: 36px;
+        }
+        .scenario-calc {
+            margin-bottom: 12px;
+            flex: 1;
+        }
+        .calc-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            gap: 8px;
+            font-size: 12px;
+            color: #666;
+            padding: 4px 0;
+            border-bottom: 1px solid #f0f0ea;
+        }
+        .calc-row:last-child { border-bottom: none; }
+        .calc-row span:first-child { flex: 1; }
+        .calc-row span:last-child { text-align: right; color: #444; white-space: nowrap; }
+        .calc-row.highlight {
+            background: var(--light-green-bg);
+            margin: 0 -4px;
+            padding: 5px 4px;
+            border-radius: 4px;
+            border-bottom: none;
+        }
+        .calc-row.highlight span { color: #333; }
+        .scenario-result {
+            font-size: 13px;
+            color: #333;
+            background: var(--light-green-bg);
+            border-radius: 4px;
+            padding: 8px 10px;
+            border: 1px solid var(--icon-green);
+            margin-top: auto;
+        }
+        .scenarios-note {
+            font-size: 12px;
+            color: #999;
+            text-align: center;
+            font-style: italic;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+
+    <div class="header">
+        <h3>Инвестиционное предложение</h3>
+        <h1>Конвертируемый заём</h1>
+        <p>Агро-стартап · Хохенау, Итапуа, Парагвай · Moringa Oleifera · Прямой производитель</p>
+    </div>
+
+    <div class="intro-section">
+        <p>
+            Прямой производитель premium моринги из Хохенау, Парагвай — собственная плантация, сушка без термообработки, полный контроль качества. Ищу партнёра-инвестора для масштабирования и выхода на рынок США.
+        </p>
+    </div>
+
+    <div class="wholesale-hero">
+
+        <div class="metrics-grid">
+            <div class="metric-box">
+                <div class="metric-val">$10–15k</div>
+                <div class="metric-label">Сумма займа</div>
+            </div>
+            <div class="metric-box">
+                <div class="metric-val">3 года</div>
+                <div class="metric-label">Срок до конвертации</div>
+            </div>
+            <div class="metric-box">
+                <div class="metric-val">2×</div>
+                <div class="metric-label">Гарантия инвестору</div>
+            </div>
+        </div>
+
+        <div class="conversion-badge">
+            <strong class="badge-title">⚡ Условия конвертации в долю</strong>
+            <div class="trigger-row">
+                <div class="trigger-num">1</div>
+                <div class="trigger-text">
+                    Следующий раунд от $100 000
+                    <span>Конвертация по цене раунда с дисконтом 20% в пользу инвестора</span>
+                </div>
+            </div>
+            <div class="trigger-row">
+                <div class="trigger-num">2</div>
+                <div class="trigger-text">
+                    Истечение 3 лет без нового раунда
+                    <span>Оценка = 5 × годовая выручка за последние 12 месяцев</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="cta-group">
+            <a href="https://wa.me/13479304623" class="btn btn-primary btn-wa" target="_blank">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" style="width:18px;height:18px;fill:white;margin-right:9px;flex-shrink:0;">
+                    <path d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.1 0-65.6-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-5.5-2.8-23.2-8.5-44.2-27.1-16.4-14.6-27.4-32.7-30.6-38.2-3.2-5.6-.3-8.6 2.4-11.3 2.5-2.4 5.5-6.5 8.3-9.7 2.8-3.3 3.7-5.6 5.5-9.3 1.8-3.7.9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 13.2 5.7 23.5 9.2 31.6 11.8 13.3 4.2 25.4 3.6 35 2.2 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z"/>
+                </svg>
+                Обсудить условия
+            </a>
+        </div>
+    </div>
+
+    <h3 class="scenarios-title" style="margin-bottom:15px;">Гарантии и ограничения</h3>
+
+    <div class="comparison-cards">
+        <div class="card premium">
+            <span class="badge badge-our">★ ЗАЩИТА ИНВЕСТОРА</span>
+            <div class="card-info">
+                <strong>Гарантированный минимум 2×</strong>
+                <small>При любом сценарии конвертации стоимость вашей доли составит не менее двух вложенных сумм. Если расчёт даёт меньше — доля автоматически увеличивается до уровня 2×.</small>
+            </div>
+        </div>
+
+        <div class="card">
+            <span class="badge badge-market">ЗАЩИТА ОСНОВАТЕЛЯ</span>
+            <div class="card-info">
+                <strong>Ограничение доли ≤ 25%</strong>
+                <small>Основатель сохраняет контроль над компанией. Независимо от расчётной доли, инвестор получает не более 25% уставного капитала.</small>
+            </div>
+        </div>
+    </div>
+
+    <div class="priority-section">
+        <h3>Баланс условий — защита обеих сторон</h3>
+        <div class="priority-row">
+            <span class="priority-label">Минимальная стоимость доли инвестора</span>
+            <span class="priority-val">≥ 2× займа</span>
+        </div>
+        <div class="priority-row">
+            <span class="priority-label">Максимальная доля инвестора в капитале</span>
+            <span class="priority-val cap">≤ 25%</span>
+        </div>
+        <div class="priority-row">
+            <span class="priority-label">Приоритет при конфликте ограничений</span>
+            <span class="priority-note">Сначала применяется 2× → затем 25% · верхняя граница приоритетна</span>
+        </div>
+    </div>
+
+    <div class="scenarios-section">
+        <h3 class="scenarios-title">Три сценария для инвестора $12 500</h3>
+        <div class="scenarios-grid">
+            <div class="scenario scenario-bad">
+                <div class="scenario-label">Пессимистичный сценарий</div>
+                <div class="scenario-desc">Раунда нет · выручка $1 000/мес</div>
+                <div class="scenario-calc">
+                    <div class="calc-row"><span>Оценка компании</span><span>5 × $12k = <strong>$60 000</strong></span></div>
+                    <div class="calc-row"><span>Расчётная доля</span><span>$12 500 / $60k = 20,8%</span></div>
+                    <div class="calc-row"><span>Гарантия 2× в деньгах</span><span>$25k / $60k = 41,7%</span></div>
+                    <div class="calc-row highlight"><span>Ограничение доли ≤ 25%</span><span>↓ до <strong>25%</strong></span></div>
+                </div>
+                <div class="scenario-result">Итог: <strong>25% · стоимость $15 000</strong></div>
+            </div>
+
+            <div class="scenario scenario-mid">
+                <div class="scenario-label">Средний сценарий</div>
+                <div class="scenario-desc">Раунд $100 000</div>
+                <div class="scenario-calc">
+                    <div class="calc-row"><span>Оценка по раунду</span><span><strong>$100 000</strong></span></div>
+                    <div class="calc-row"><span>Дисконт 20%</span><span>цена входа $80 000</span></div>
+                    <div class="calc-row"><span>Расчётная доля</span><span>$12 500 / $80k = 15,6%</span></div>
+                    <div class="calc-row highlight"><span>Гарантия 2× не нужна</span><span><strong>15,6%</strong></span></div>
+                </div>
+                <div class="scenario-result">Итог: <strong>15,6% · стоимость $15 600</strong></div>
+            </div>
+
+            <div class="scenario scenario-good">
+                <div class="scenario-label">Оптимистичный сценарий</div>
+                <div class="scenario-desc">Раунд $500 000</div>
+                <div class="scenario-calc">
+                    <div class="calc-row"><span>Оценка по раунду</span><span><strong>$500 000</strong></span></div>
+                    <div class="calc-row"><span>Дисконт 20%</span><span>цена входа $400 000</span></div>
+                    <div class="calc-row"><span>Расчётная доля</span><span>$12 500 / $400k = 3,1%</span></div>
+                    <div class="calc-row highlight"><span>Применяется гарантия 2×</span><span>↑ до <strong>5%</strong></span></div>
+                </div>
+                <div class="scenario-result">Итог: <strong>5% · стоимость $25 000</strong></div>
+            </div>
+        </div>
+        <div class="scenarios-note">Расчёт на основе займа $12 500 (середина диапазона). В пессимистичном сценарии доля ограничена 25% условиями договора.</div>
+    </div>
+
+    <div class="footer">
+        Хохенау, Итапуа, Парагвай · Прямой производитель · Moringa Oleifera · Estate Grown Since 2024
+    </div>
+
+</div>
+</body>
+</html>
